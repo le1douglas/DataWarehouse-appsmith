@@ -55,9 +55,7 @@
   "customIsLoadingValue": "",
   "defaultPageSize": 0,
   "defaultSelectedRowIndex": 0,
-  "defaultSelectedRowIndices": [
-    0
-  ],
+  "defaultSelectedRowIndices": "",
   "delimiter": ",",
   "dynamicBindingPathList": [
     {
@@ -113,18 +111,26 @@
     },
     {
       "key": "primaryColumns.tags.computedValue"
+    },
+    {
+      "key": "primaryColumns.type.isCellEditable"
+    },
+    {
+      "key": "primaryColumns.type.cellBackground"
     }
   ],
   "dynamicPropertyPathList": [
     {
       "key": "tableData"
-    }
-  ],
-  "dynamicTriggerPathList": [
+    },
     {
-      "key": "primaryColumns.type.onSubmit"
+      "key": "primaryColumns.type.isCellEditable"
+    },
+    {
+      "key": "primaryColumns.type.cellBackground"
     }
   ],
+  "dynamicTriggerPathList": [],
   "enableClientSideSearch": true,
   "endOfData": false,
   "flexVerticalAlignment": "start",
@@ -145,6 +151,7 @@
   "mobileLeftColumn": 0,
   "mobileRightColumn": 24,
   "mobileTopRow": 19,
+  "multiRowSelection": false,
   "needsErrorInfo": false,
   "parentColumnSpace": 17.15625,
   "parentId": "0",
@@ -572,6 +579,7 @@
       "allowCellWrapping": false,
       "allowHeaderWrapping": false,
       "allowSameOptionsInNewRow": true,
+      "cellBackground": "{{(() => { const tableData = data_table.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (editability.background(currentRow))) : editability.background(currentRow) })()}}",
       "columnType": "text",
       "computedValue": "{{(() => { const tableData = data_table.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"type\"])) : type })()}}",
       "currencyCode": "USD",
@@ -581,7 +589,7 @@
       "horizontalAlignment": "LEFT",
       "id": "type",
       "index": 4,
-      "isCellEditable": true,
+      "isCellEditable": "{{(() => { const tableData = data_table.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (editability.isEditable(currentRow))) : editability.isEditable(currentRow) })()}}",
       "isCellVisible": true,
       "isDerived": false,
       "isDisabled": false,
@@ -591,7 +599,7 @@
       "isVisible": true,
       "label": "type",
       "notation": "standard",
-      "onSubmit": "{{update.run().then(() => {\n  update.run();\n  showAlert('table updated', 'success');\n});}}",
+      "onSubmit": "",
       "originalId": "type",
       "sticky": "",
       "textSize": "0.875rem",
