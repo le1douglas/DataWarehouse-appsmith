@@ -8,6 +8,7 @@
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "cachedTableData": {},
   "canFreezeColumn": true,
+  "cellBackground": "{{Editability.background(currentRow)}}",
   "childStylesheet": {
     "button": {
       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
@@ -51,6 +52,7 @@
   "columnWidthMap": {
     "row_id": 170
   },
+  "compactMode": "DEFAULT",
   "customIsLoading": false,
   "customIsLoadingValue": "",
   "defaultPageSize": 0,
@@ -116,7 +118,49 @@
       "key": "primaryColumns.type.isCellEditable"
     },
     {
+      "key": "cellBackground"
+    },
+    {
+      "key": "primaryColumns.temp.cellBackground"
+    },
+    {
+      "key": "primaryColumns.notes.cellBackground"
+    },
+    {
+      "key": "primaryColumns.subject.cellBackground"
+    },
+    {
+      "key": "primaryColumns.ec_pore.cellBackground"
+    },
+    {
+      "key": "primaryColumns.media.cellBackground"
+    },
+    {
       "key": "primaryColumns.type.cellBackground"
+    },
+    {
+      "key": "primaryColumns.tags.cellBackground"
+    },
+    {
+      "key": "primaryColumns.date_time.cellBackground"
+    },
+    {
+      "key": "primaryColumns.mc.cellBackground"
+    },
+    {
+      "key": "primaryColumns.ph.cellBackground"
+    },
+    {
+      "key": "primaryColumns.row_id.cellBackground"
+    },
+    {
+      "key": "primaryColumns.device.cellBackground"
+    },
+    {
+      "key": "primaryColumns.ec_bulk.cellBackground"
+    },
+    {
+      "key": "primaryColumns.ec.cellBackground"
     }
   ],
   "dynamicPropertyPathList": [
@@ -128,12 +172,20 @@
     },
     {
       "key": "primaryColumns.type.cellBackground"
+    },
+    {
+      "key": "cellBackground"
+    },
+    {
+      "key": "primaryColumns.date_time.cellBackground"
     }
   ],
   "dynamicTriggerPathList": [],
   "enableClientSideSearch": true,
   "endOfData": false,
   "flexVerticalAlignment": "start",
+  "fontStyle": "",
+  "headerRowColor": "",
   "horizontalAlignment": "LEFT",
   "inlineEditingSaveOption": "CUSTOM",
   "isLoading": false,
@@ -163,21 +215,23 @@
       "allowCellWrapping": false,
       "allowHeaderWrapping": false,
       "allowSameOptionsInNewRow": true,
+      "cellBackground": "{{Editability.background(currentRow)}}",
       "columnType": "text",
       "computedValue": "{{(() => { const tableData = data_table.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"date_time\"])) : date_time })()}}",
       "currencyCode": "USD",
       "decimals": 0,
       "enableFilter": true,
       "enableSort": true,
+      "fontStyle": "",
       "horizontalAlignment": "LEFT",
       "id": "date_time",
       "index": 1,
-      "isCellEditable": false,
+      "isCellEditable": true,
       "isCellVisible": true,
       "isDerived": false,
       "isDisabled": false,
       "isDiscardVisible": true,
-      "isEditable": false,
+      "isEditable": true,
       "isSaveVisible": true,
       "isVisible": true,
       "label": "date_time",
@@ -195,12 +249,14 @@
       "allowCellWrapping": false,
       "allowHeaderWrapping": false,
       "allowSameOptionsInNewRow": true,
+      "cellBackground": "{{Editability.background(currentRow)}}",
       "columnType": "text",
       "computedValue": "{{(() => { const tableData = data_table.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"device\"])) : device })()}}",
       "currencyCode": "USD",
       "decimals": 0,
       "enableFilter": true,
       "enableSort": true,
+      "fontStyle": "",
       "horizontalAlignment": "LEFT",
       "id": "device",
       "index": 11,
@@ -227,12 +283,14 @@
       "allowCellWrapping": false,
       "allowHeaderWrapping": false,
       "allowSameOptionsInNewRow": true,
+      "cellBackground": "{{Editability.background(currentRow)}}",
       "columnType": "text",
       "computedValue": "{{(() => { const tableData = data_table.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"ec\"])) : ec })()}}",
       "currencyCode": "USD",
       "decimals": 0,
       "enableFilter": true,
       "enableSort": true,
+      "fontStyle": "",
       "horizontalAlignment": "LEFT",
       "id": "ec",
       "index": 5,
@@ -259,12 +317,14 @@
       "allowCellWrapping": false,
       "allowHeaderWrapping": false,
       "allowSameOptionsInNewRow": true,
+      "cellBackground": "{{Editability.background(currentRow)}}",
       "columnType": "text",
       "computedValue": "{{(() => { const tableData = data_table.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"ec_bulk\"])) : ec_bulk })()}}",
       "currencyCode": "USD",
       "decimals": 0,
       "enableFilter": true,
       "enableSort": true,
+      "fontStyle": "",
       "horizontalAlignment": "LEFT",
       "id": "ec_bulk",
       "index": 7,
@@ -291,12 +351,14 @@
       "allowCellWrapping": false,
       "allowHeaderWrapping": false,
       "allowSameOptionsInNewRow": true,
+      "cellBackground": "{{Editability.background(currentRow)}}",
       "columnType": "text",
       "computedValue": "{{(() => { const tableData = data_table.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"ec_pore\"])) : ec_pore })()}}",
       "currencyCode": "USD",
       "decimals": 0,
       "enableFilter": true,
       "enableSort": true,
+      "fontStyle": "",
       "horizontalAlignment": "LEFT",
       "id": "ec_pore",
       "index": 6,
@@ -323,12 +385,14 @@
       "allowCellWrapping": false,
       "allowHeaderWrapping": false,
       "allowSameOptionsInNewRow": true,
+      "cellBackground": "{{Editability.background(currentRow)}}",
       "columnType": "text",
       "computedValue": "{{(() => { const tableData = data_table.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"mc\"])) : mc })()}}",
       "currencyCode": "USD",
       "decimals": 0,
       "enableFilter": true,
       "enableSort": true,
+      "fontStyle": "",
       "horizontalAlignment": "LEFT",
       "id": "mc",
       "index": 9,
@@ -355,12 +419,14 @@
       "allowCellWrapping": false,
       "allowHeaderWrapping": false,
       "allowSameOptionsInNewRow": true,
+      "cellBackground": "{{Editability.background(currentRow)}}",
       "columnType": "text",
       "computedValue": "{{(() => { const tableData = data_table.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"media\"])) : media })()}}",
       "currencyCode": "USD",
       "decimals": 0,
       "enableFilter": true,
       "enableSort": true,
+      "fontStyle": "",
       "horizontalAlignment": "LEFT",
       "id": "media",
       "index": 12,
@@ -387,12 +453,14 @@
       "allowCellWrapping": false,
       "allowHeaderWrapping": false,
       "allowSameOptionsInNewRow": true,
+      "cellBackground": "{{Editability.background(currentRow)}}",
       "columnType": "text",
       "computedValue": "{{(() => { const tableData = data_table.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"notes\"])) : notes })()}}",
       "currencyCode": "USD",
       "decimals": 0,
       "enableFilter": true,
       "enableSort": true,
+      "fontStyle": "",
       "horizontalAlignment": "LEFT",
       "id": "notes",
       "index": 3,
@@ -419,12 +487,14 @@
       "allowCellWrapping": false,
       "allowHeaderWrapping": false,
       "allowSameOptionsInNewRow": true,
+      "cellBackground": "{{Editability.background(currentRow)}}",
       "columnType": "text",
       "computedValue": "{{(() => { const tableData = data_table.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"ph\"])) : ph })()}}",
       "currencyCode": "USD",
       "decimals": 0,
       "enableFilter": true,
       "enableSort": true,
+      "fontStyle": "",
       "horizontalAlignment": "LEFT",
       "id": "ph",
       "index": 8,
@@ -451,12 +521,14 @@
       "allowCellWrapping": false,
       "allowHeaderWrapping": false,
       "allowSameOptionsInNewRow": true,
+      "cellBackground": "{{Editability.background(currentRow)}}",
       "columnType": "text",
       "computedValue": "{{(() => { const tableData = data_table.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"row_id\"])) : row_id })()}}",
       "currencyCode": "USD",
       "decimals": 0,
       "enableFilter": true,
       "enableSort": true,
+      "fontStyle": "",
       "horizontalAlignment": "LEFT",
       "id": "row_id",
       "index": 0,
@@ -483,12 +555,14 @@
       "allowCellWrapping": false,
       "allowHeaderWrapping": false,
       "allowSameOptionsInNewRow": true,
+      "cellBackground": "{{Editability.background(currentRow)}}",
       "columnType": "text",
       "computedValue": "{{(() => { const tableData = data_table.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"subject\"])) : subject })()}}",
       "currencyCode": "USD",
       "decimals": 0,
       "enableFilter": true,
       "enableSort": true,
+      "fontStyle": "",
       "horizontalAlignment": "LEFT",
       "id": "subject",
       "index": 2,
@@ -515,12 +589,14 @@
       "allowCellWrapping": false,
       "allowHeaderWrapping": false,
       "allowSameOptionsInNewRow": true,
+      "cellBackground": "{{Editability.background(currentRow)}}",
       "columnType": "text",
       "computedValue": "{{(() => { const tableData = data_table.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"tags\"])) : tags })()}}",
       "currencyCode": "USD",
       "decimals": 0,
       "enableFilter": true,
       "enableSort": true,
+      "fontStyle": "",
       "horizontalAlignment": "LEFT",
       "id": "tags",
       "index": 13,
@@ -547,12 +623,14 @@
       "allowCellWrapping": false,
       "allowHeaderWrapping": false,
       "allowSameOptionsInNewRow": true,
+      "cellBackground": "{{Editability.background(currentRow)}}",
       "columnType": "text",
       "computedValue": "{{(() => { const tableData = data_table.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"temp\"])) : temp })()}}",
       "currencyCode": "USD",
       "decimals": 0,
       "enableFilter": true,
       "enableSort": true,
+      "fontStyle": "",
       "horizontalAlignment": "LEFT",
       "id": "temp",
       "index": 10,
@@ -579,17 +657,18 @@
       "allowCellWrapping": false,
       "allowHeaderWrapping": false,
       "allowSameOptionsInNewRow": true,
-      "cellBackground": "{{(() => { const tableData = data_table.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (editability.background(currentRow))) : editability.background(currentRow) })()}}",
+      "cellBackground": "{{Editability.background(currentRow)}}",
       "columnType": "text",
       "computedValue": "{{(() => { const tableData = data_table.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"type\"])) : type })()}}",
       "currencyCode": "USD",
       "decimals": 0,
       "enableFilter": true,
       "enableSort": true,
+      "fontStyle": "",
       "horizontalAlignment": "LEFT",
       "id": "type",
       "index": 4,
-      "isCellEditable": "{{(() => { const tableData = data_table.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (editability.isEditable(currentRow))) : editability.isEditable(currentRow) })()}}",
+      "isCellEditable": "{{(() => { const tableData = data_table.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (Editability.isEditable(currentRow))) : Editability.isEditable(currentRow) })()}}",
       "isCellVisible": true,
       "isDerived": false,
       "isDisabled": false,
