@@ -1,3 +1,0 @@
-UPDATE dw_bronze.brnz_journal_entries
-SET    type = {{data_table.updatedRow.type}}
-WHERE  row_id = {{data_table.updatedRow.row_id}};
