@@ -5,7 +5,7 @@
   "borderColor": "#E0DEDE",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "1",
-  "bottomRow": 90,
+  "bottomRow": 102,
   "bottomRowBeforeCollapse": 85,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "childStylesheet": {
@@ -115,15 +115,6 @@
       "key": "schema.__root_schema__.cellBorderRadius"
     },
     {
-      "key": "schema.__root_schema__.children.row_id.defaultValue"
-    },
-    {
-      "key": "schema.__root_schema__.children.row_id.accentColor"
-    },
-    {
-      "key": "schema.__root_schema__.children.row_id.borderRadius"
-    },
-    {
       "key": "sourceData"
     },
     {
@@ -206,9 +197,18 @@
     },
     {
       "key": "schema.__root_schema__.children.room_raw.accentColor"
+    },
+    {
+      "key": "schema.__root_schema__.children.row_id.defaultValue"
+    },
+    {
+      "key": "schema.__root_schema__.children.row_id.borderRadius"
+    },
+    {
+      "key": "schema.__root_schema__.children.row_id.accentColor"
     }
   ],
-  "dynamicHeight": "FIXED",
+  "dynamicHeight": "AUTO_HEIGHT",
   "dynamicPropertyPathList": [
     {
       "key": "sourceData"
@@ -225,7 +225,7 @@
   "isLoading": false,
   "isVisible": true,
   "key": "majj24r5jl",
-  "leftColumn": 48,
+  "leftColumn": 0,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
@@ -235,6 +235,8 @@
   "mobileTopRow": 16,
   "needsErrorInfo": false,
   "onSubmit": "{{upsert_corrections.run().then(() => {\n  showAlert('success', 'success');\n}).catch(() => {\n  showAlert('error', 'error');\n});}}",
+  "originalBottomRow": 102,
+  "originalTopRow": 10,
   "parentColumnSpace": 11.7666015625,
   "parentId": "am308vq2mk",
   "parentRowSpace": 10,
@@ -247,7 +249,7 @@
     "buttonVariant": "SECONDARY"
   },
   "responsiveBehavior": "fill",
-  "rightColumn": 64,
+  "rightColumn": 18,
   "schema": {
     "__root_schema__": {
       "accessor": "__root_schema__",
@@ -400,15 +402,15 @@
           "iconAlign": "left",
           "identifier": "row_id",
           "isCustomField": false,
-          "isDisabled": true,
+          "isDisabled": false,
           "isRequired": false,
           "isSpellCheck": false,
           "isVisible": true,
           "label": "Row Id",
           "labelTextSize": "0.875rem",
           "originalIdentifier": "row_id",
-          "position": 0,
-          "sourceData": ""
+          "position": 9,
+          "sourceData": "01a18770-c389-7166-acc9-a9709125db08"
         },
         "subject": {
           "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(form_row.sourceData, form_row.formData, form_row.fieldState)}}",
@@ -509,7 +511,7 @@
   },
   "scrollContents": true,
   "shouldScrollContents": true,
-  "showReset": true,
+  "showReset": false,
   "sourceData": "{{table_data.selectedRow}}",
   "submitButtonLabel": "Update",
   "submitButtonStyles": {
@@ -519,7 +521,7 @@
     "buttonVariant": "PRIMARY"
   },
   "title": "Update Row",
-  "topRow": 0,
+  "topRow": 10,
   "topRowBeforeCollapse": 0,
   "type": "JSON_FORM_WIDGET",
   "useSourceData": false,

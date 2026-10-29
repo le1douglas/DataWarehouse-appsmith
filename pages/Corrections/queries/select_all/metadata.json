@@ -29,7 +29,7 @@
     ],
     "name": "select_all",
     "pageId": "Corrections",
-    "runBehaviour": "AUTOMATIC",
-    "userSetOnLoad": false
+    "runBehaviour": "ON_PAGE_LOAD",
+    "userSetOnLoad": true
   }
 }

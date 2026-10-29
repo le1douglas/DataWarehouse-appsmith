@@ -1,0 +1,3 @@
+select *
+from dw_audit.{{ CorrUtils.audTable() }}
+where row_id = '{{ table_data.selectedRow.row_id }}'::uuid;

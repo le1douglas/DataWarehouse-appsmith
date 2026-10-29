@@ -1,0 +1,2 @@
+SELECT DISTINCT *
+FROM dw_audit.{{ CorrUtils.audTable() }};

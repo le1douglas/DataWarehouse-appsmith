@@ -26,6 +26,9 @@
   "dynamicTriggerPathList": [
     {
       "key": "onDropdownClose"
+    },
+    {
+      "key": "onOptionChange"
     }
   ],
   "hideCard": false,
@@ -34,12 +37,12 @@
   "isDisabled": false,
   "isFilterable": false,
   "isLoading": false,
-  "isRequired": false,
+  "isRequired": true,
   "isVisible": true,
   "key": "uuhcahpt5v",
   "labelAlignment": "left",
   "labelPosition": "Top",
-  "labelText": "Table",
+  "labelText": "Dataset",
   "labelTextSize": "0.875rem",
   "labelWidth": 5,
   "leftColumn": 1,
@@ -47,7 +50,7 @@
   "minDynamicHeight": 4,
   "minWidth": 450,
   "onDropdownClose": "",
-  "onOptionChange": "",
+  "onOptionChange": "{{select_all.run()}}",
   "optionLabel": "dataset",
   "optionValue": "dataset",
   "originalBottomRow": 13,

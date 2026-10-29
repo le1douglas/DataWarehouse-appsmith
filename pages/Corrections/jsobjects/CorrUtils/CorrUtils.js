@@ -9,6 +9,12 @@ export default {
 	candTable() {
 		return "cand_" + sel_dataset.selectedOptionValue;
 	},
+	
+	// the audit table of the selected dataset: journal_entries becomes aud_journal_entries
+	audTable() {
+		return "aud_" + sel_dataset.selectedOptionValue;
+	},
+
 
 		// the row_id of the row in the form
 	rowId() {
