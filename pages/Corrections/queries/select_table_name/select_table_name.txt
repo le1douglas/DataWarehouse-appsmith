@@ -1,0 +1,4 @@
+select regexp_replace(table_name, '^cand_', '') as dataset
+from information_schema.tables
+where table_schema = 'dw_candidate'
+order by dataset;

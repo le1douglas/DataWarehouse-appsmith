@@ -42,14 +42,14 @@
   "labelText": "Table",
   "labelTextSize": "0.875rem",
   "labelWidth": 5,
-  "leftColumn": 13,
+  "leftColumn": 1,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
   "onDropdownClose": "",
   "onOptionChange": "",
-  "optionLabel": "table_name",
-  "optionValue": "table_name",
+  "optionLabel": "dataset",
+  "optionValue": "dataset",
   "originalBottomRow": 13,
   "originalTopRow": 6,
   "parentColumnSpace": 23.578125,
@@ -58,15 +58,15 @@
   "placeholderText": "Any",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 47,
+  "rightColumn": 48,
   "searchTags": [
     "dropdown"
   ],
   "serverSideFiltering": false,
-  "sourceData": "{{select_table_names.data}}",
+  "sourceData": "{{select_table_name.data}}",
   "topRow": 6,
   "type": "SELECT_WIDGET",
   "version": 1,
   "widgetId": "bn74j6ct61",
-  "widgetName": "sel_table"
+  "widgetName": "sel_dataset"
 }

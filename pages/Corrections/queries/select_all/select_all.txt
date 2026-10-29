@@ -1,2 +1,7 @@
-SELECT *
-FROM "{{sel_schema.selectedOptionValue}}"."{{sel_table.selectedOptionValue}}"
+--get the data from cand, but only the columns of corr
+select r.*
+from dw_candidate."{{ CorrUtils.candTable() }}" as c
+cross join lateral json_populate_record(
+    null::dw_corrections."{{ CorrUtils.corrTable() }}",
+    row_to_json(c)
+) as r;

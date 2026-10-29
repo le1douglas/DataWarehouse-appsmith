@@ -1,16 +1,16 @@
 {
-  "gitSyncId": "6ae20c680fbd3aad0ef556ff_7ee8b444-b18f-4eda-b24f-74bead2e278a",
+  "gitSyncId": "6ae202e20fbd3aad0ef556e4_e8ee4d4a-45af-4c78-9a15-8a97004c430a",
   "id": "Corrections_upsert_corrections",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT * FROM dw_audit.\"aud_journal_entries\" LIMIT 10;",
+      "body": "do $corr$\nbegin\n    -- delete and then insert, so the insert can use * and works for every dataset\n    delete from dw_corrections.\"{{ CorrUtils.corrTable() }}\"\n    where row_id = $id${{ CorrUtils.rowId() }}$id$::uuid;\n\n    insert into dw_corrections.\"{{ CorrUtils.corrTable() }}\"\n    select *\n    from json_populate_record(\n        null::dw_corrections.\"{{ CorrUtils.corrTable() }}\",\n        $form${{ CorrUtils.formJson() }}$form$::json\n    );\n\n    -- who reviewed the row, and when\n    insert into dw_corrections.meta_corrections (row_id, kind, description)\n    select $id${{ CorrUtils.rowId() }}$id$::uuid, m.kind, m.description\n    from (values\n        ('meta_reviewed_by', $who${{ appsmith.user.email }}$who$),\n        ('meta_reviewed_date_time', to_char(now(), 'YYYY-MM-DD\"T\"HH24:MI:SSTZH:TZM'))\n    ) as m(kind, description)\n    on conflict (row_id, kind) do update set\n        description = excluded.description;\nend\n$corr$;\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
         {
-          "value": true
+          "value": false
         }
       ],
       "timeoutInMillisecond": 10000
@@ -22,6 +22,11 @@
       "name": "Postgres Dev",
       "pluginId": "postgres-plugin"
     },
+    "dynamicBindingPathList": [
+      {
+        "key": "body"
+      }
+    ],
     "name": "upsert_corrections",
     "pageId": "Corrections",
     "runBehaviour": "MANUAL",

@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT *\nFROM \"{{sel_schema.selectedOptionValue}}\".\"{{sel_table.selectedOptionValue}}\"\n",
+      "body": "--get the data from cand, but only the columns of corr\nselect r.*\nfrom dw_candidate.\"{{ CorrUtils.candTable() }}\" as c\ncross join lateral json_populate_record(\n    null::dw_corrections.\"{{ CorrUtils.corrTable() }}\",\n    row_to_json(c)\n) as r;\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

@@ -1,1 +1,24 @@
-SELECT * FROM dw_audit."aud_journal_entries" LIMIT 10;
+do $corr$
+begin
+    -- delete and then insert, so the insert can use * and works for every dataset
+    delete from dw_corrections."{{ CorrUtils.corrTable() }}"
+    where row_id = $id${{ CorrUtils.rowId() }}$id$::uuid;
+
+    insert into dw_corrections."{{ CorrUtils.corrTable() }}"
+    select *
+    from json_populate_record(
+        null::dw_corrections."{{ CorrUtils.corrTable() }}",
+        $form${{ CorrUtils.formJson() }}$form$::json
+    );
+
+    -- who reviewed the row, and when
+    insert into dw_corrections.meta_corrections (row_id, kind, description)
+    select $id${{ CorrUtils.rowId() }}$id$::uuid, m.kind, m.description
+    from (values
+        ('meta_reviewed_by', $who${{ appsmith.user.email }}$who$),
+        ('meta_reviewed_date_time', to_char(now(), 'YYYY-MM-DD"T"HH24:MI:SSTZH:TZM'))
+    ) as m(kind, description)
+    on conflict (row_id, kind) do update set
+        description = excluded.description;
+end
+$corr$;

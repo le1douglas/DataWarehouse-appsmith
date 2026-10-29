@@ -44,8 +44,11 @@
     "ml",
     "room_raw"
   ],
-  "columnUpdatedAt": 1793266995226,
-  "columnWidthMap": {},
+  "columnUpdatedAt": 1793270772027,
+  "columnWidthMap": {
+    "row_id": 126,
+    "subject": 265
+  },
   "customIsLoading": false,
   "customIsLoadingValue": "",
   "defaultPageSize": 0,
