@@ -1,0 +1,1 @@
+SELECT * FROM dw_audit."aud_journal_entries" LIMIT 10;

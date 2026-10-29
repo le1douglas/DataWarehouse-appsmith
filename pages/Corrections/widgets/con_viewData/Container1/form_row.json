@@ -206,51 +206,15 @@
     },
     {
       "key": "schema.__root_schema__.children.room_raw.borderRadius"
-    },
-    {
-      "key": "schema.__root_schema__.children.room.defaultValue"
-    },
-    {
-      "key": "schema.__root_schema__.children.room.accentColor"
-    },
-    {
-      "key": "schema.__root_schema__.children.room.borderRadius"
-    },
-    {
-      "key": "schema.__root_schema__.children.room_index.defaultValue"
-    },
-    {
-      "key": "schema.__root_schema__.children.room_index.accentColor"
-    },
-    {
-      "key": "schema.__root_schema__.children.room_index.borderRadius"
-    },
-    {
-      "key": "schema.__root_schema__.children.position_index.defaultValue"
-    },
-    {
-      "key": "schema.__root_schema__.children.position_index.accentColor"
-    },
-    {
-      "key": "schema.__root_schema__.children.position_index.borderRadius"
-    },
-    {
-      "key": "schema.__root_schema__.children.position.defaultValue"
-    },
-    {
-      "key": "schema.__root_schema__.children.position.accentColor"
-    },
-    {
-      "key": "schema.__root_schema__.children.position.borderRadius"
     }
   ],
   "dynamicHeight": "FIXED",
   "dynamicPropertyPathList": [
     {
-      "key": "onSubmit"
+      "key": "sourceData"
     },
     {
-      "key": "sourceData"
+      "key": "onSubmit"
     }
   ],
   "dynamicTriggerPathList": [],
@@ -355,7 +319,7 @@
           "labelTextSize": "0.875rem",
           "originalIdentifier": "ml",
           "position": 8,
-          "sourceData": "1000"
+          "sourceData": "2200"
         },
         "notes": {
           "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(form_row.sourceData, form_row.formData, form_row.fieldState)}}",
@@ -401,101 +365,13 @@
           "position": 8,
           "sourceData": "6.32"
         },
-        "position": {
-          "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(form_row.sourceData, form_row.formData, form_row.fieldState)}}",
-          "accessor": "position",
-          "borderRadius": "{{((sourceData, formData, fieldState) => ((appsmith.theme.borderRadius.appBorderRadius)))(form_row.sourceData, form_row.formData, form_row.fieldState)}}",
-          "boxShadow": "none",
-          "children": {},
-          "dataType": "string",
-          "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.position))(form_row.sourceData, form_row.formData, form_row.fieldState)}}",
-          "fieldType": "Text Input",
-          "iconAlign": "left",
-          "identifier": "position",
-          "isCustomField": false,
-          "isDisabled": false,
-          "isRequired": false,
-          "isSpellCheck": false,
-          "isVisible": true,
-          "label": "Position",
-          "labelTextSize": "0.875rem",
-          "originalIdentifier": "position",
-          "position": 13,
-          "sourceData": "drip_left"
-        },
-        "position_index": {
-          "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(form_row.sourceData, form_row.formData, form_row.fieldState)}}",
-          "accessor": "position_index",
-          "borderRadius": "{{((sourceData, formData, fieldState) => ((appsmith.theme.borderRadius.appBorderRadius)))(form_row.sourceData, form_row.formData, form_row.fieldState)}}",
-          "boxShadow": "none",
-          "children": {},
-          "dataType": "number",
-          "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.position_index))(form_row.sourceData, form_row.formData, form_row.fieldState)}}",
-          "fieldType": "Number Input",
-          "iconAlign": "left",
-          "identifier": "position_index",
-          "isCustomField": false,
-          "isDisabled": false,
-          "isRequired": false,
-          "isSpellCheck": false,
-          "isVisible": true,
-          "label": "Position Index",
-          "labelTextSize": "0.875rem",
-          "originalIdentifier": "position_index",
-          "position": 12,
-          "sourceData": 1
-        },
-        "room": {
-          "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(form_row.sourceData, form_row.formData, form_row.fieldState)}}",
-          "accessor": "room",
-          "borderRadius": "{{((sourceData, formData, fieldState) => ((appsmith.theme.borderRadius.appBorderRadius)))(form_row.sourceData, form_row.formData, form_row.fieldState)}}",
-          "boxShadow": "none",
-          "children": {},
-          "dataType": "string",
-          "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.room))(form_row.sourceData, form_row.formData, form_row.fieldState)}}",
-          "fieldType": "Text Input",
-          "iconAlign": "left",
-          "identifier": "room",
-          "isCustomField": false,
-          "isDisabled": false,
-          "isRequired": false,
-          "isSpellCheck": false,
-          "isVisible": true,
-          "label": "Room",
-          "labelTextSize": "0.875rem",
-          "originalIdentifier": "room",
-          "position": 10,
-          "sourceData": "0.29"
-        },
-        "room_index": {
-          "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(form_row.sourceData, form_row.formData, form_row.fieldState)}}",
-          "accessor": "room_index",
-          "borderRadius": "{{((sourceData, formData, fieldState) => ((appsmith.theme.borderRadius.appBorderRadius)))(form_row.sourceData, form_row.formData, form_row.fieldState)}}",
-          "boxShadow": "none",
-          "children": {},
-          "dataType": "number",
-          "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.room_index))(form_row.sourceData, form_row.formData, form_row.fieldState)}}",
-          "fieldType": "Number Input",
-          "iconAlign": "left",
-          "identifier": "room_index",
-          "isCustomField": false,
-          "isDisabled": false,
-          "isRequired": false,
-          "isSpellCheck": false,
-          "isVisible": true,
-          "label": "Room Index",
-          "labelTextSize": "0.875rem",
-          "originalIdentifier": "room_index",
-          "position": 11,
-          "sourceData": 1
-        },
         "room_raw": {
           "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(form_row.sourceData, form_row.formData, form_row.fieldState)}}",
           "accessor": "room_raw",
           "borderRadius": "{{((sourceData, formData, fieldState) => ((appsmith.theme.borderRadius.appBorderRadius)))(form_row.sourceData, form_row.formData, form_row.fieldState)}}",
           "boxShadow": "none",
           "children": {},
-          "dataType": "string",
+          "dataType": "null",
           "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.room_raw))(form_row.sourceData, form_row.formData, form_row.fieldState)}}",
           "fieldType": "Text Input",
           "iconAlign": "left",
@@ -508,8 +384,7 @@
           "label": "Room Raw",
           "labelTextSize": "0.875rem",
           "originalIdentifier": "room_raw",
-          "position": 9,
-          "sourceData": "0.29"
+          "position": 9
         },
         "row_id": {
           "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(form_row.sourceData, form_row.formData, form_row.fieldState)}}",
