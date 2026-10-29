@@ -1,16 +1,16 @@
 {
-  "gitSyncId": "6ae2325ff7c91018ff4ac9f2_74fa5238-a16b-4475-87b7-5fe11ee945e0",
-  "id": "Page1_editable_random",
+  "gitSyncId": "6ae20c680fbd3aad0ef556ff_73c49eae-4367-4421-bf14-b54a315e86c5",
+  "id": "Corrections_select_all",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT row_id\nFROM   dw_bronze.brnz_journal_entries\nWHERE  right(row_id::text, 1) IN ('0','2','4','6','8','a','c','e');\n",
+      "body": "SELECT *\nFROM \"{{sel_schema.selectedOptionValue}}\".\"{{sel_table.selectedOptionValue}}\"\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
         {
-          "value": true
+          "value": false
         }
       ],
       "timeoutInMillisecond": 10000
@@ -22,10 +22,14 @@
       "name": "Postgres Dev",
       "pluginId": "postgres-plugin"
     },
-    "dynamicBindingPathList": [],
-    "name": "editable_random",
-    "pageId": "Page1",
-    "runBehaviour": "MANUAL",
+    "dynamicBindingPathList": [
+      {
+        "key": "body"
+      }
+    ],
+    "name": "select_all",
+    "pageId": "Corrections",
+    "runBehaviour": "AUTOMATIC",
     "userSetOnLoad": false
   }
 }

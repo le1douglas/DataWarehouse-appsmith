@@ -1,6 +1,0 @@
-UPDATE dw_bronze.brnz_journal_entries t
-SET type = u.type
-FROM json_to_recordset({{JSON.stringify(data_table.updatedRows.map(r => r.allFields))}}::json)
-       AS u(row_id uuid, type text)
-WHERE  t.row_id = u.row_id;
---this is a change tracked in git

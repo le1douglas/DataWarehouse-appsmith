@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "6ae202e20fbd3aad0ef556e4_6fdc8d54-e09e-4589-a6d6-9d892dcc220f",
-  "id": "Page1_select_all",
+  "gitSyncId": "6ae20c680fbd3aad0ef556ff_10737897-d6c3-4d3d-b0de-b7d5c637f213",
+  "id": "Corrections_select_table_schema",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT * FROM dw_bronze.brnz_journal_entries ORDER BY date_time DESC;",
+      "body": "SELECT DISTINCT table_schema\nFROM information_schema.tables\nWHERE table_schema NOT IN ('pg_catalog', 'information_schema')\nORDER BY table_schema;\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -23,8 +23,8 @@
       "pluginId": "postgres-plugin"
     },
     "dynamicBindingPathList": [],
-    "name": "select_all",
-    "pageId": "Page1",
+    "name": "select_table_schema",
+    "pageId": "Corrections",
     "runBehaviour": "AUTOMATIC",
     "userSetOnLoad": false
   }

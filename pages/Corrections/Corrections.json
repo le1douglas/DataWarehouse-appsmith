@@ -1,23 +1,24 @@
 {
-  "gitSyncId": "6ae202e20fbd3aad0ef556e4_53e42c42-af16-4d23-9fcc-9e756243df0c",
+  "gitSyncId": "null_51e9cf47-8b49-4f6c-b9e9-817ce0d9b5a3",
   "unpublishedPage": {
+    "isHidden": false,
     "layouts": [
       {
         "dsl": {
           "backgroundColor": "none",
-          "bottomRow": 950,
+          "bottomRow": 1070,
           "canExtend": true,
           "containerStyle": "none",
           "detachFromLayout": true,
           "dynamicBindingPathList": [],
           "dynamicTriggerPathList": [],
           "leftColumn": 0,
-          "minHeight": 900,
+          "minHeight": 1292,
           "parentColumnSpace": 1,
           "parentRowSpace": 1,
-          "rightColumn": 1174,
+          "rightColumn": 4896,
           "snapColumns": 64,
-          "snapRows": 125,
+          "snapRows": 124,
           "topRow": 0,
           "type": "CANVAS_WIDGET",
           "version": 94,
@@ -26,7 +27,7 @@
         }
       }
     ],
-    "name": "Page1",
-    "slug": "page1"
+    "name": "Corrections",
+    "slug": "corrections"
   }
 }

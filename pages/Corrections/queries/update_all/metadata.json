@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "6ae202e20fbd3aad0ef556e4_0ff549b3-d3af-4b99-a1e9-72903c995241",
-  "id": "Page1_update_all",
+  "gitSyncId": "6ae20c680fbd3aad0ef556ff_4b78b1f8-fe7e-4397-a5f3-721c0539bcfc",
+  "id": "Corrections_update_all",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "UPDATE dw_bronze.brnz_journal_entries t\nSET type = u.type\nFROM json_to_recordset({{JSON.stringify(data_table.updatedRows.map(r => r.allFields))}}::json)\n       AS u(row_id uuid, type text)\nWHERE  t.row_id = u.row_id;\n--this is a change tracked in git\n",
+      "body": "UPDATE dw_bronze.brnz_journal_entries t\nSET type = u.type\nFROM json_to_recordset({{JSON.stringify(table_data.updatedRows.map(r => r.allFields))}}::json)\n       AS u(row_id uuid, type text)\nWHERE  t.row_id = u.row_id;\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -28,7 +28,7 @@
       }
     ],
     "name": "update_all",
-    "pageId": "Page1",
+    "pageId": "Corrections",
     "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
