@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "UPDATE dw_bronze.brnz_journal_entries t\nSET type = u.type\nFROM json_to_recordset({{JSON.stringify(data_table.updatedRows.map(r => r.allFields))}}::json)\n       AS u(row_id uuid, type text)\nWHERE  t.row_id = u.row_id;\n--this is a chenge tracked in git",
+      "body": "UPDATE dw_bronze.brnz_journal_entries t\nSET type = u.type\nFROM json_to_recordset({{JSON.stringify(data_table.updatedRows.map(r => r.allFields))}}::json)\n       AS u(row_id uuid, type text)\nWHERE  t.row_id = u.row_id;\n--this is a change tracked in git",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
